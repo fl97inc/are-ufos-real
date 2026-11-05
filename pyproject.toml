@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "are-ufos-real"
+version = "1.0.0"
+description = "Minimal reproduction code for UFO modular-division experiments"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "Apache-2.0"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+dependencies = [
+  "numpy==2.5.1",
+  "torch==2.13.0",
+]
+
+[project.scripts]
+ufo-reproduce = "ufo.reproduce:main"
+
+[tool.setuptools.packages.find]
+include = ["ufo*"]
